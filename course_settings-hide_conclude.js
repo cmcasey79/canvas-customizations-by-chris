@@ -5,7 +5,7 @@ $(document).ready(function(){
 		// Checks that current user role is not an admin. Admins can access all settings.
 		if($.inArray('admin',ENV.current_user_roles) == -1){
 			// Hides course conclude button
-			$('a[href*=\'confirm_action?event=conclude\']').hide();
+			document.querySelectorAll('a[href*=\'confirm_action?event=conclude\']').forEach(button => { button.style.display = 'none' });
 		}
 	}
 
