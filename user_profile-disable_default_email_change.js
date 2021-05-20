@@ -1,7 +1,7 @@
 $(document).ready(function(){
 
 	// Check if page is user profile
-	if (/^\/profile$/.test(window.location.pathname)) {
+	if ((/^\/profile$/.test(window.location.pathname)) || (/^\/profile\/settings$/.test(window.location.pathname))) {
 		// Checks that current user role is not an admin to hide default email change icon. Admins can access all settings.
 		if($.inArray('admin',ENV.current_user_roles) == -1){
 			//Hide links to change default email
@@ -12,7 +12,7 @@ $(document).ready(function(){
 });
 
 /*
-Copyright 2019 Christopher Casey
+Copyright 2021 Christopher Casey
 
 This program is free software: you can redistribute it and/or modify it under the terms of the GNU General Public License as published by the Free Software Foundation, either version 3 of the License, or (at your option) any later version.
 
