@@ -1,3 +1,4 @@
+// Adds a link to All Courses directly ont he dashboard.  Helps users find future or concluded courses and reduced amount of tickets about "missing" courses at the end of a term.
 $(document).ready(function(){
 
 	// Checks if page is dashboard
