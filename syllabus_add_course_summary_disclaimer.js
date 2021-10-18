@@ -1,3 +1,4 @@
+// Adds a disclaimer for the course summary on the syllabus page.  Makes it more obvious to students that course content may change, sepecially if they are viewing the syllabus page very early on, or the course is being developed on-the-fly.
 $(document).ready(function(){
 
   // Checks if page is syllabus or homepage
