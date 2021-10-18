@@ -1,3 +1,4 @@
+// Hides the course settings > Conclude button from non-admins.  Prevents teachers from accidentalls concluding the course before it's done.  Especially useful is course availabiloty is determined by term dates.
 $(document).ready(function(){
 
 	// Checks if page is course settings
