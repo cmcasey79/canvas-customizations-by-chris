@@ -1,3 +1,4 @@
+// Hides the course settings > Reser button from non-admins.  Prevents teachers from accidentally clearning out their course.
 $(document).ready(function(){
 	
 	// Checks if page is course settings
