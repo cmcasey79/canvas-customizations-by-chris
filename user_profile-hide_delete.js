@@ -1,3 +1,4 @@
+// Removed the ability for users to delete their Canvas accounts
 $(document).ready(function(){
 
 	// Check if page is user profile
