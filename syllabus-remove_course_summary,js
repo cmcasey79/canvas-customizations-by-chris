@@ -1,3 +1,4 @@
+// Hides the course summary section from all syllabus pages.
 $(document).ready(function(){
 
   // Checks if page is syllabus or homepage
