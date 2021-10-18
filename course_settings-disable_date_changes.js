@@ -1,3 +1,5 @@
+//DEPRICATED As of 2021, Instructure has changed date functionality and this script is no longer functional or needed.  Preserving for archives.
+//Disables course settings start and end boxes fr non-admins
 $(document).ready(function(){
 
 	// Checks if page is course settings
