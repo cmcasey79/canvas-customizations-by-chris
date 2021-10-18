@@ -1,3 +1,5 @@
+// DEPRICATED as of 2021, Instructure added an account-level option to disable treat ungraded as 0.  Keeping for archival purposes.
+// Hides the Treat Ungraded as 0 option from the New Gradebook.
 var do_global_customizations = function(){
 
 	// Checks if page is course gradebook	
