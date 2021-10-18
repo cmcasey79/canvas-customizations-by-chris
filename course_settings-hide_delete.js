@@ -1,3 +1,4 @@
+// Hides course settings > Delete button from non-admins.  Prevents teachers from mistakenly deleting courses.  Especially useful when courses and created and maintained by SIS syncs.
 $(document).ready(function(){
 
 	// Checks if page is course settings
