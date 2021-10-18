@@ -1,3 +1,4 @@
+// Disables the course setting "include in public course index" option from being chaned by non-admins.
 $(document).ready(function(){
 
 	// Checks if page is course settings
