@@ -1,3 +1,4 @@
+// Disables the ability for non-admins to use the unpublish button on the course homepage
 $(document).ready(function(){
 
 	// Check if page is course homepage
