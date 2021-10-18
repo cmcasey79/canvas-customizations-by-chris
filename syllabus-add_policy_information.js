@@ -1,3 +1,4 @@
+// Adds an HTML section to the syllabus page.  Useful to put university policies here and have them appear automatically on every syllabus.
 $(document).ready(function(){
 
   // Checks if page is syllabus or homepage
