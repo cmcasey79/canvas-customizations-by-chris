@@ -1,3 +1,4 @@
+// Disables the course setting "visibility" options from being chaned by non-admins.
 $(document).ready(function(){
 
 	// Checks if page is course settings
