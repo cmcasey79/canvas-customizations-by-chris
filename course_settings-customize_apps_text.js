@@ -1,3 +1,4 @@
+// Replaces default text on course settings>apps tab with HTML of your choosing.  May be useful to include policy/procedures for requesting new integrations.
 $(document).ready(function(){
 		
 		// Replaces descriptive text on External Apps tab.
