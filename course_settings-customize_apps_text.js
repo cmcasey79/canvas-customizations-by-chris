@@ -1,5 +1,5 @@
 // Replaces default text on course settings>apps tab with HTML of your choosing.  May be useful to include policy/procedures for requesting new integrations.
-$(document).ready(function(){
+var do_global_customizations = function(){
 	
 	if ((/^\/courses\/[0-9]+\/settings$/.test(window.location.pathname)) || (/^\/courses\/[0-9]+\/details$/.test(window.location.pathname))) {
 		
@@ -21,6 +21,12 @@ $(document).ready(function(){
 	}
 	
 });
+
+if (document.readyState === "complete" || (document.readyState !== "loading" && !document.documentElement.doScroll)) {
+	do_global_customizations();
+} else {
+	document.addEventListener("DOMContentLoaded", do_global_customizations);
+}
 
 /*
 Copyright 2022 Christopher Casey
