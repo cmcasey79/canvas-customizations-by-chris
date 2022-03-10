@@ -20,7 +20,7 @@ var do_global_customizations = function(){
 		}); 
 	}
 	
-});
+};
 
 if (document.readyState === "complete" || (document.readyState !== "loading" && !document.documentElement.doScroll)) {
 	do_global_customizations();
