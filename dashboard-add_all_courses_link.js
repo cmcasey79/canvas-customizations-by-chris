@@ -2,7 +2,7 @@
 var do_customizations = function(){
 	// Checks if page is dashboard
 	if (window.location.pathname=='/') {
-		document.getElementById('DashboardCard_Container').insertAdjacentHTML('beforebegin', ''<div><p>Additional courses, including those from previous semesters, may be found on your <a href="/courses">All Courses</a> page.</p></div>');
+		document.getElementById('DashboardCard_Container').insertAdjacentHTML('beforebegin', '<div><p>Additional courses, including those from previous semesters, may be found on your <a href="/courses">All Courses</a> page.</p></div>');
 	}
 }
 
