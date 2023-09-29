@@ -73,3 +73,63 @@ async function get_user_context_roles(includeAdmin=false){
 	};
 	return role_dict;
 }
+
+// The script in the below comment block should be pasted into a google apps script webapp project that is made available for anyone to run
+// In the google apps script project settings area, a user api key tied to a Canvas addount with add.remove admin permission must be entered.
+//   - Name the property your canvas domain followed by _api_key (ex: institution.instructure.com_api_key, and paske the key as the proverty value
+//   - You will need to make a property for your production, test, and beta instances if you want the script to work there as well (the value may be the same API key after test/beta clone from production)
+/*
+function get_canvas_admin_roles(canvas_domain,canvas_user_id,canvas_account_id) {
+  const canvas_api_key=PropertiesService.getScriptProperties().getProperty(canvas_domain+'_api_key')
+  var status=null;
+  if (canvas_api_key!=null) {
+    var get_options = {
+     "method": "get",
+      "headers": {
+       "Authorization": "Bearer "+canvas_api_key
+     },
+     "muteHttpExceptions": true
+    }
+    var role_dict={role:new Set(),type:new Set()};
+    while (canvas_account_id !== null) {
+      response=UrlFetchApp.fetch('https://'+canvas_domain+'/api/v1/accounts/'+canvas_account_id,get_options);
+      status=response.getResponseCode();
+      if (status==200) {
+  		  account_obj=JSON.parse(response.getContentText());
+  		  response=UrlFetchApp.fetch('https://'+canvas_domain+'/api/v1/accounts/'+canvas_account_id+'/admins?user_id[]='+canvas_user_id,get_options);
+        status=response.getResponseCode();
+        if (status==200) {
+  		    user_account_roles_obj=JSON.parse(response.getContentText());
+  		    user_account_roles_obj.forEach(accountRole => {
+  		  	  if (account_obj.parent_account_id == null) {
+		  		    role_dict.role.add('RootAccount:'+accountRole.role);
+  		  		  role_dict.type.add('RootAccount:admin');
+  		  	  }
+  		  	  role_dict.role.add('Account:'+accountRole.role);
+  		  	  role_dict.type.add('Account:admin');
+  		    });
+  		    canvas_account_id=account_obj.parent_account_id;
+        }
+        else {
+         canvas_account_id=null; 
+        }
+      }
+      else {
+        canvas_account_id=null;
+      }
+    };
+  }
+  return {'status':((status==200) ? 'success' : 'error'),'status_code':status,'data': ((status==200) ? {role:[...role_dict.role],type:[...role_dict.type]} : null)};
+}
+
+function doGet(e) {
+  var result=''
+  if (!e || !e.parameter || !e.parameter.canvas_account_id || !e.parameter.canvas_user_id || !e.parameter.canvas_domain) {
+    result={'status':'error: missing parameter', 'status_code': null, 'data': null};
+  }
+  else {
+    result=JSON.stringify(get_canvas_admin_roles(e.parameter.canvas_domain,e.parameter.canvas_user_id,e.parameter.canvas_account_id));
+  }
+  return ContentService.createTextOutput(result)
+}
+*/
