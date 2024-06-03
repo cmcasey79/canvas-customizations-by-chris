@@ -1,0 +1,4 @@
+/* Hide '+ New Access Token' button on user profile page */
+div:has(> a.add_access_token_link) {
+	display:none;
+}
