@@ -1,4 +1,4 @@
-// Disables the ability for users to change their default email address.  Helpful to keep the instution assigned email address as default, which can prevent issues with some LTI apps.
+// Disables the ability for users to change their default email address.  Helpful to keep the institution assigned email address as default, which can prevent issues with some LTI apps.
 $(document).ready(function(){
 
 	// Check if page is user profile
